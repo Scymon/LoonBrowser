@@ -1,0 +1,36 @@
+/* Logo Component Styles - with strict size constraints */
+
+.loon-logo {
+  display: flex;
+  align-items: center;
+  margin-right: var(--space-md);
+  max-height: 32px;
+  overflow: visible;
+}
+
+.loon-logo svg {
+  width: 24px;
+  height: 24px;
+  min-width: 24px; /* Prevent shrinking */
+  min-height: 24px; /* Prevent shrinking */
+  max-width: 24px; /* Prevent expanding */
+  max-height: 24px; /* Prevent expanding */
+  flex-shrink: 0; /* Prevent the SVG from shrinking */
+  display: block; /* Ensure it respects dimensions */
+}
+
+.loon-logo-text {
+  color: var(--north-white);
+  font-weight: 600;
+  font-size: var(--text-md);
+  margin-left: var(--space-xs);
+  white-space: nowrap;
+  display: none; /* Hidden by default, show on larger screens */
+}
+
+/* Show logo text on larger screens */
+@media (min-width: 768px) {
+  .loon-logo-text {
+    display: block;
+  }
+}

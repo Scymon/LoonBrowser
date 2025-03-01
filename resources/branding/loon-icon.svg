@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="#1A5F7A"/>
+  
+  <!-- Loon silhouette -->
+  <path d="M256 100c-85 0-155 70-155 155 0 85 70 155 155 155s155-70 155-155c0-85-70-155-155-155z" fill="#252525"/>
+  
+  <!-- Water ripple (simplified) -->
+  <path d="M110 280c40-20 100-20 140 0 40 20 100 20 140 0" stroke="#88CCE7" stroke-width="10" fill="none"/>
+  <path d="M130 310c35-15 90-15 125 0 35 15 90 15 125 0" stroke="#88CCE7" stroke-width="8" fill="none"/>
+  
+  <!-- White markings -->
+  <circle cx="200" cy="200" r="25" fill="#F8F8F8"/>
+  <path d="M275 160l60 60-60 60V160z" fill="#F8F8F8"/>
+  
+  <!-- Loon bill -->
+  <path d="M200 225v40l50 20-50-60z" fill="#F8F8F8"/>
+</svg>

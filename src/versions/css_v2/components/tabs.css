@@ -1,0 +1,82 @@
+/* Tab Component Styles - with fixed height and spacing */
+
+.tab-bar {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  background-color: var(--medium-blue);
+  border-bottom: 1px solid var(--deep-lake-blue);
+  overflow-x: auto; /* Allow horizontal scrolling if too many tabs */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  white-space: nowrap; /* Keep tabs in a single line */
+  padding-left: var(--space-xs);
+}
+
+.tab {
+  display: inline-flex; /* Use inline-flex for better sizing */
+  align-items: center;
+  height: 32px; /* Fixed height */
+  background-color: var(--light-blue);
+  margin-right: var(--space-xs);
+  padding: 0 var(--space-md);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  font-size: var(--text-sm);
+  cursor: pointer;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--loon-black);
+  transition: background-color 0.2s;
+  flex-shrink: 0; /* Prevent tabs from shrinking */
+}
+
+.tab.active {
+  background-color: var(--north-white);
+  border: 1px solid var(--medium-blue);
+  border-bottom: none;
+  font-weight: 500;
+}
+
+.tab:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.tab-close {
+  margin-left: var(--space-xs);
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  flex-shrink: 0; /* Prevent close button from shrinking */
+}
+
+.tab:hover .tab-close {
+  opacity: 0.8;
+}
+
+.tab-close:hover {
+  opacity: 1;
+}
+
+.new-tab-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px; /* Prevent shrinking */
+  min-height: 28px; /* Prevent shrinking */
+  border-radius: var(--radius-pill);
+  background-color: var(--light-blue);
+  border: none;
+  font-size: var(--text-lg);
+  color: var(--deep-lake-blue);
+  transition: all 0.2s;
+  margin-left: auto; /* Push to the right if space is available */
+  margin-right: var(--space-xs);
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.new-tab-button:hover {
+  background-color: var(--north-white);
+  transform: scale(1.1);
+}

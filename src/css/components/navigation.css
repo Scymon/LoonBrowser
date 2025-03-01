@@ -1,0 +1,56 @@
+/* Navigation Component Styles */
+
+.navigation-buttons {
+    display: flex;
+    margin-right: var(--space-sm);
+  }
+  
+  .nav-button {
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius-pill);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--space-xs);
+    color: var(--north-white);
+    font-size: var(--text-lg);
+    transition: background-color 0.2s;
+  }
+  
+  .nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .nav-button:active {
+    transform: scale(0.95);
+  }
+  
+  .nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Loading indicator */
+  .loading-indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--north-white);
+    animation: spin 1s linear infinite;
+    margin-right: var(--space-xs);
+    display: none;
+  }
+  
+  .loading .loading-indicator {
+    display: block;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
